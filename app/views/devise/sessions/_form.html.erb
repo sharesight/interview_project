@@ -1,0 +1,29 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <fieldset>
+  
+    <div class="control-fields">
+      <div class="control-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, :autofocus => true %>
+      </div>
+    
+      <div class="control-group">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </div>
+    
+      <% if devise_mapping.rememberable? -%>
+        <div class="control-group">
+          <%= content_tag :label, :class => 'checkbox' do %>
+            <%= f.object.class.human_attribute_name :remember_me %>
+            <%= f.check_box :remember_me %>
+          <% end %>
+        </div>
+      <% end -%>
+    </div>
+    
+    <div class="form-actions">
+      <%= f.submit "Sign in", :class => 'btn btn-primary' %>
+    </div>
+  </fieldset>
+<% end %>

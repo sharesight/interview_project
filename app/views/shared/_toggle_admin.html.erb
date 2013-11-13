@@ -1,0 +1,10 @@
+<p>
+  Hi <%= current_user.email %>,<br/>
+  <% if current_user.admin? %>
+    You are <strong class="text-success">an admin</strong>!
+  <% else %>
+    You are <strong class="text-error">not an admin</strong>!
+  <% end %>
+</p>
+<p><%= link_to "toggle admin permissions", toggle_admin_path, class:"btn" %></p>
+<hr />
