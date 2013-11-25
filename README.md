@@ -8,7 +8,7 @@ How to setup the project:
 - rails s
 
 
-The current users table already has an admin field against, so you won't need to take care of this.
+The current users table already has an admin field against it, so you won't need to take care of this.
 The basic authentication logic is already working.
 Also the project has a basic interface defined, using Twitter bootstrap.
 
